@@ -139,7 +139,7 @@ span{
     object-fit: contain;*/
 }
 ::-webkit-scrollbar{
-    width: 15px;
+    width: 12px;
 }
 ::-webkit-scrollbar-thumb{
     background-color: #00b3d3;
