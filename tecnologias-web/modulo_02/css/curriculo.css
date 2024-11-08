@@ -6,7 +6,6 @@ body {
     color: #333;
 }
 
-/* Barra de navegación */
 .navbar {
     background-color: #333;
     padding: 10px;
@@ -33,19 +32,22 @@ body {
 
 .navbar-links a:hover {
     color: #007BFF;
+}
 
 .curriculum-section {
     padding: 20px;
 }
 
-h1, h2 {
-    text-align: center;
+h1 {
     margin-bottom: 10px;
+    color: #007BFF;
+    font-size: 2.5rem;
 }
 
 h2 {
-    font-size: 1.5rem;
-    color: #444;
+    margin-bottom: 10px;
+    color: #007BFF;
+    font-size: 2rem;
 }
 
 ul {
@@ -55,7 +57,7 @@ ul {
 
 li {
     margin-bottom: 8px;
-    font-size: 0.95rem;
+    font-size: 1rem; /* Aumentar el tamaño de los elementos de la lista */
 }
 
 a {
