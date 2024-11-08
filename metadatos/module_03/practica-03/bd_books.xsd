@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="lista">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="book" type="tipoBook" maxOccurs="unbounded"/>
+                <xs:element name="library" type="tipoLibrary" minOccurs= "0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>   
+    <xs:complexType name="tipoBook">
+        
+            <xs:sequence>
+                <xs:element name="title" type="xs:string"/>
+                <xs:element name="authors" type="TipoAutores"/>
+                <xs:element name="date" type="xs:date"/>
+                <xs:element name="publisher" type="xs:string"/>
+                <xs:element name="language" minOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="IT"/>
+                            <xs:enumeration value="ES"/>
+                            <xs:enumeration value="EN"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>        
+                
+                <xs:element name="bestseller" type="xs:boolean" minOccurs="1"/> 
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" use="required"/>
+       
+    </xs:complexType>
+
+    <xs:complexType name='TipoAutores'>   
+         <xs:sequence>
+            <xs:element name='author' type='xs:string' 
+                        minOccurs='1' 
+                        maxOccurs='unbounded'/>
+         </xs:sequence>    
+    </xs:complexType>
+
+    <xs:complexType name="tipoLibrary">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="location" type="xs:string"/>
+            <xs:element name="books">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="bookId" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:simpleContent>
+                                    <xs:extension base="xs:IDREF">
+                                        <xs:attribute name="quantity" type="xs:integer" use="required"/>
+                                    </xs:extension>
+                                </xs:simpleContent>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
