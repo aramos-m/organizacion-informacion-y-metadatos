@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lista>
+<!-- Última actualización: 8 de noviembre de 2024 -->
+    <book>
+        <title id="01">Reina Roja</title>
+        <authors>
+            <author>Juan Gómez-Jurado</author>
+        </authors>
+        <date>2018</date>
+        <pubPlace>Barcelona</pubPlace>
+    </book>
+    <book>
+        <title id="02">La paciente silenciosa</title>
+        <authors>
+            <author>Alex Michaelides</author>
+            <author>Laura Manero Jiménez</author>
+        </authors>
+        <pubPlace>Barcelona</pubPlace>
+    </book>
+    <book>
+        <title id="03">De vuelta a casa</title>
+        <authors>
+            <author>Kate Morton</author>
+        </authors>
+        <publisher>SUMA</publisher>
+        <date>2000</date>
+    </book>
+    <book>
+        <title id="04">El sótano</title>
+        <authors>
+            <author>Natasha Preston</author>
+        </authors>
+        <publisher>Crossbooks</publisher>
+        <date>2017</date>
+        <extent>336 páginas</extent>
+        <keywords scheme="http://id.loc.gov/authorities/about.html#lcsh">
+            <term>Kidnapping -- Fiction</term>
+            <term>Crime -- Fiction</term>
+        </keywords>
+        <idno>978-8408177630</idno>
+    </book>
+    <book>
+        <title id="05">El nombre del viento</title>
+        <authors>
+            <author>Patrick Rothfuss</author>
+            <author>Nathan Taylor</author>
+        </authors>
+        <extent>662 páginas</extent>
+        <keywords scheme="http://id.loc.gov/authorities/about.html#lcsh">
+            <term>Fantasy fiction</term>
+            <term>Adventure stories</term>
+        </keywords>
+        <idno>978-8401352836</idno>
+    </book>
+    <book>
+        <title id="06">Los hombres me explican cosas</title>
+        <authors>
+            <author>Rebecca Solnit</author>
+            <author>Stephen Duncombe</author>
+            <author>James Yeager</author>
+        </authors>
+        <extent>130 páginas</extent>
+        <keywords scheme="http://id.loc.gov/authorities/about.html#lcsh">
+            <term>Feminism</term>
+            <term>Social history -- United States</term>
+        </keywords>
+        <idno>978-8494966140</idno>
+    </book>
+    <book>
+        <title id="07">Americanah</title>
+        <authors>
+            <author>Chimamanda Ngozi Adichie</author>
+            <author>Zadie Smith</author>
+            <author>Karen McCarthy</author>
+        </authors>
+        <extent>608 páginas</extent>
+        <keywords scheme="http://id.loc.gov/authorities/about.html#lcsh">
+            <term>Racism -- Fiction</term>
+            <term>Emigration and immigration -- Fiction</term>
+        </keywords>
+        <idno>978-0307455925</idno>
+    </book>
+    <book>
+        <title id="08">American Gods</title>
+        <authors>
+            <author>Neil Gaiman</author>
+            <author>Terry Pratchett</author>
+        </authors>
+        <extent>560 páginas</extent>
+        <keywords scheme="http://id.loc.gov/authorities/about.html#lcsh">
+            <term>Fantasy fiction</term>
+            <term>Mythology -- Fiction</term>
+        </keywords>
+        <idno>978-0062572233</idno>
+    </book>
+</lista>
