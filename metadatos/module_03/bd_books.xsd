@@ -8,7 +8,7 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>   
-    <xs:complexType name="tipoBook">
+    <xs:complexType name="tipoBook"> 
         
             <xs:sequence>
                 <xs:element name="title" type="xs:string"/>

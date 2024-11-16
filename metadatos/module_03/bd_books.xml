@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lista xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+    xs:noNamespaceSchemaLocation="bd_books.xsd">
+    <!-- The xsi:noNamespaceSchemaLocation attribute can be used in an XML document to reference 
+     an XML Schema document that does not have a target namespace -->
+    <book id="libro1">
+        <title>Good Omens</title>
+        <authors>
+            <author>Neil Gaiman</author>
+            <author>Terry Pratchett</author>
+        </authors>
+        <date>1990-05-01</date>
+        <publisher>Gollancz</publisher>
+        <language>EN</language>
+        <bestseller>true</bestseller>
+    </book>
+    <book id="libro2">
+        <title>El nombre del viento</title>
+        <authors>
+            <author>Patrick Rothfuss</author>
+        </authors>
+        <date>2007-03-27</date>
+        <publisher>DAW Books</publisher>
+        <language>ES</language>
+        <bestseller>false</bestseller>
+    </book>
+    <book id="libro3">
+        <title>Lombra del vento</title>
+        <authors>
+            <author>Carlos Ruiz Zafón</author>
+        </authors>
+        <date>2001-04-01</date>
+        <publisher>Planeta</publisher>
+        <language>IT</language>
+        <bestseller>true</bestseller>
+    </book>
+    <book id="libro4">
+        <title>1984</title>
+        <authors>
+            <author>George Orwell</author>
+        </authors>
+        <date>1949-06-08</date>
+        <publisher>Secker and Warburg</publisher>
+        <language>IT</language>
+        <bestseller>false</bestseller>
+    </book>
+    <book id="libro5">
+        <title>El alquimista</title>
+        <authors>
+            <author>Paulo Coelho</author>
+        </authors>
+        <date>1988-05-01</date>
+        <publisher>HarperCollins</publisher>
+        <language>ES</language>
+        <bestseller>true</bestseller>
+    </book>
+    <book id="libro6">
+        <title>The Talisman</title>
+        <authors>
+            <author>Stephen King</author>
+            <author>Peter Straub</author>
+        </authors>
+        <date>1984-11-08</date>
+        <publisher>Viking Press</publisher>
+        <language>EN</language>
+        <bestseller>false</bestseller>
+    </book>
+    <book id="libro7">
+        <title>El señor de los anillos</title>
+        <authors>
+            <author>J.R.R. Tolkien</author>
+        </authors>
+        <date>1954-07-29</date>
+        <publisher>Allen and Unwin</publisher>
+        <language>ES</language>
+        <bestseller>true</bestseller>
+    </book>
+    <library>
+        <name>Webster Library</name>
+        <location>New York</location>
+        <books>
+            <bookId quantity="5">libro6</bookId>
+            <bookId quantity="3">libro1</bookId>
+        </books>
+    </library>
+    <library>
+        <name>Westside Library</name>
+        <location>Galway</location>
+        <books>
+            <bookId quantity="2">libro1</bookId>
+            <bookId quantity="3">libro4</bookId>
+        </books>
+    </library>
+    <library>
+        <name>Biblioteca Nacional de España</name>
+        <location>Madrid</location>
+        <books>
+            <bookId quantity="4">libro2</bookId>
+            <bookId quantity="2">libro4</bookId>
+            <bookId quantity="3">libro7</bookId>
+        </books>
+    </library>
+</lista>
