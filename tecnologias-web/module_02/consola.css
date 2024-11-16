@@ -1,0 +1,12 @@
+/* Estilo de consola (consola.css) */
+
+body {
+    font-family: monospace;
+    color: #00CC00;
+    background-color: #000000;
+    font-size: 18px;
+}
+
+em {
+    font-weight: bold;
+}

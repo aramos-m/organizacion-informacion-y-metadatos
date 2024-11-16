@@ -1,0 +1,11 @@
+/* default.css */
+
+body {
+    font-family: sans-serif;
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+em {
+    font-weight: bold;
+}
