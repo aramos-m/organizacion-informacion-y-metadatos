@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <!-- books -->
+    <books>
+        <book code="4696">
+            <title>The Last Jew</title>
+            <language_code>eng</language_code>
+            <publication_date>
+                <year>2000</year>
+                <month>8</month>
+            </publication_date>
+            <num_pages>352</num_pages>
+            <library>B03</library>
+            <stock>7</stock>
+        </book>
+        <book code="3291">
+            <title>The Stories of Eva Luna</title>
+            <publication_date>
+                <year>2001</year>
+                <month>11</month>
+            </publication_date>
+            <details>
+                <price currency="gbp">57</price>
+            </details>
+            <num_pages>352</num_pages>
+            <library>B02</library>
+            <stock>1</stock>
+        </book>
+        <book code="3302">
+            <title>El plan infinito</title>
+            <publication_date>
+                <year>2002</year>
+                <month>5</month>
+            </publication_date>
+            <num_pages>336</num_pages>
+            <library>B04</library>
+            <stock>7</stock>
+        </book>
+        <book code="9924">
+            <title>A Tree of Night and Other Stories</title>
+            <publication_date>
+                <year>1993</year>
+                <month>9</month>
+            </publication_date>
+            <num_pages>272</num_pages>
+            <library>B03</library>
+            <stock>10</stock>
+        </book>
+        <book code="2289">
+            <title>In Cold Blood</title>
+            <publication_date>
+                <year>2006</year>
+                <month>1</month>
+            </publication_date>
+            <details>
+                <price currency="usd">42.27</price>
+                <price currency="esp">45.84</price>
+            </details>
+            <num_pages>15</num_pages>
+            <library>B01</library>
+            <stock>0</stock>
+        </book>
+        <book code="1419">
+            <title>The Complete Works</title>
+            <publication_date>
+                <year>1991</year>
+                <month>10</month>
+            </publication_date>
+            <details>
+                <price currency="usd">22.74</price>
+            </details>
+            <num_pages>1248</num_pages>
+            <library>B03</library>
+            <stock>0</stock>
+        </book>
+        <book code="8852">
+            <title>Macbeth</title>
+            <language_code>eng</language_code>
+            <publication_date>
+                <year>2013</year>
+                <month>7</month>
+            </publication_date>
+            <publisher>Simon  Schuster</publisher>
+            <details>
+                <price currency="esp">59.44</price>
+                <price currency="usd">65.32</price>
+            </details>
+            <library>B02</library>
+            <stock>9</stock>
+        </book>
+    </books>
+
+    <!-- socios de las bibliotecas -->
+
+    <users>
+        <user id="63a98f369ac62a82b44566aa">
+            <name>Ana Navarro López</name>
+            <address>
+                <city>Madrid</city>
+                <country>España</country>
+            </address>
+            <penalized>yes</penalized>
+        </user>
+        <user id="63a98f369ac62a82b44566ab">
+            <name>Julian Marcón Manoto</name>
+            <age>35</age>
+            <penalized>yes</penalized>
+        </user>
+        <user id="63a98f369ac62a82b44566ac">
+            <name>Luis González Martín</name>
+            <age>25</age>
+            <address>
+                <city>Madrid</city>
+                <country>España</country>
+            </address>
+        </user>
+        <user id="63a98f369ac62a82b44566ad">
+            <name>María Angely Titany</name>
+            <age>47</age>
+            <address>
+                <city>Barcelona</city>
+                <country>España</country>
+            </address>
+            <penalized>yes</penalized>
+        </user>
+        <user id="63a98f369ac62a82b44566ae">
+            <name>Benito Martín Barco</name>
+            <age>50</age>
+            <address>
+                <city>Barcelona</city>
+                <country>España</country>
+            </address>
+        </user>
+        <user id="63a98f369ac62a82b44566af">
+            <name>Juan Moncuera Dumas</name>
+            <age>29</age>
+            <address>
+                <city>Madrid</city>
+                <country>España</country>
+            </address>
+        </user>
+    </users>
+
+    <!-- préstamos -->
+    <prestamos>
+        <prestamo>
+            <user>63a98f369ac62a82b44566ad</user>
+            <library>B02</library>
+            <book>3291</book>
+            <expiration_days>0</expiration_days>
+        </prestamo>
+        <prestamo>
+            <user>63a98f369ac62a82b44566aa</user>
+            <library>B02</library>
+            <book>3302</book>
+            <expiration_days>0</expiration_days>
+        </prestamo>
+        <prestamo>
+            <user>63a98f369ac62a82b44566aa</user>
+            <library>B04</library>
+            <book>3291</book>
+            <expiration_days>0</expiration_days>
+        </prestamo>
+        <prestamo>
+            <user>63a98f369ac62a82b44566ab</user>
+            <library>B03</library>
+            <book>4696</book>
+            <expiration_days>8</expiration_days>
+        </prestamo>
+        <prestamo>
+            <user>63a98f369ac62a82b44566ac</user>
+            <library>B03</library>
+            <book>3291</book>
+            <expiration_days>-10</expiration_days>
+        </prestamo>
+        <prestamo>
+            <user>63a98f369ac62a82b44566aa</user>
+            <library>B04</library>
+            <book>4696</book>
+            <expiration_days>-1</expiration_days>
+        </prestamo>
+        <prestamo>
+            <user>63a98f369ac62a82b44566ac</user>
+            <library>B02</library>
+            <book>3302</book>
+            <expiration_days>0</expiration_days>
+        </prestamo>
+        <prestamo>
+            <user>63a98f369ac62a82b44566ac</user>
+            <library>B03</library>
+            <book>9924</book>
+            <expiration_days>-2</expiration_days>
+        </prestamo>
+        <prestamo>
+            <user>63a98f369ac62a82b44566ad</user>
+            <library>B02</library>
+            <book>9924</book>
+            <expiration_days>0</expiration_days>
+        </prestamo>
+        <prestamo>
+            <user>63a98f369ac62a82b44566ae</user>
+            <library>B02</library>
+            <book>2289</book>
+            <expiration_days>3</expiration_days>
+        </prestamo>
+        <prestamo>
+            <user>63a98f369ac62a82b44566af</user>
+            <library>B03</library>
+            <book>3302</book>
+            <expiration_days>1</expiration_days>
+        </prestamo>
+    </prestamos>
+
+</library>

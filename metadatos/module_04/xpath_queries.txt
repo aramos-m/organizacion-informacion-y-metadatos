@@ -1,0 +1,102 @@
+---------------------------------------------------------
+                RESPUESTAS A LOS EJERCICIOS
+---------------------------------------------------------
+
+# Preguntas (7 puntos):
+
+1. Nombre de todos los usuarios.
+   Consulta XPath:
+   //name
+
+2. Años de publicación de todos los libros.
+   Consulta XPath:
+   //publication_date/year
+
+3. Códigos de todos los libros.
+   Consulta XPath:
+   //@code
+
+4. Describe el resultado de la consulta: 
+   //book/title | //book//stock
+   Resultado:
+   [Line 6] title: The Last Jew
+   [Line 14] stock: 7
+   [Line 17] title: The Stories of Eva Luna
+   [Line 27] stock: 1
+   [Line 30] title: El plan infinito
+   [Line 37] stock: 7
+   [Line 40] title: A Tree of Night and Other Stories
+   [Line 47] stock: 10
+   [Line 50] title: In Cold Blood
+   [Line 61] stock: 0
+   [Line 64] title: The Complete Works
+   [Line 74] stock: 0
+   [Line 77] title: Macbeth
+   [Line 89] stock: 9
+
+5. Títulos de todos los libros junto con su año de publicación.
+   Consulta XPath:
+   //title | //publication_date/year
+
+6. Títulos de todos los libros junto con su código.
+   Consulta XPath:
+   //title | //@code
+
+7. Nombre de los usuarios que tengan penalización.
+   Consulta XPath:
+   //*[penalized="yes"]/name
+
+8. Nombre de los usuarios con edad menor que 30.
+   Consulta XPath:
+   //*[age<30]/name
+
+9. Código de identificación de todos los usuarios.
+   Consulta XPath:
+   //@id
+
+10. Nombre del usuario con código de identificación “63a98f369ac62a82b44566af”.
+    Consulta XPath:
+    //*[@id="63a98f369ac62a82b44566af"]/name
+
+11. Códigos de los libros prestados al usuario con código de identificación “63a98f369ac62a82b44566ad”.
+    Consulta XPath:
+    //*[@code=//*[user="63a98f369ac62a82b44566ad"]/book]/title
+
+12. Datos de los préstamos que se encuentran retrasados (expiration_days con valor negativo).
+    Consulta XPath:
+    //*[@expiration_days<0]/node()
+
+13. Datos del último préstamo (último registro en el fichero).
+    Consulta XPath:
+    //prestamo[last()]
+
+14. Edad de los usuarios residentes en la ciudad de Madrid.
+    Consulta XPath:
+    //*[city="Madrid"]/../age
+
+15. Títulos de los libros cuyo año de publicación es distinto del 2000.
+    Consulta XPath:
+    //*[publication_date[year!=2000]]/title
+
+16. Título de los libros que tienen precio expresado en dólares (‘usd’).
+    Consulta XPath:
+    //*[details[price[@currency="usd"]]]/title
+
+---------------------------------------------------------
+# Preguntas (3 puntos):
+
+1. Nombre de los libros prestados al usuario con código de identificación “63a98f369ac62a82b44566ad”.
+   Consulta XPath:
+   //*[@code=//*[user="63a98f369ac62a82b44566ad"]/book]/title
+
+2. Códigos de los libros prestados a los usuarios residentes en Madrid.
+   Consulta XPath:
+   //*[@user=//*[address[city="Madrid"]]/@id]/book
+
+3. Título de los libros cuyo precio está expresado en dos monedas o más.
+   Consulta XPath:
+   //*[
+       (price[@currency="usd"] and price[@currency!="usd"]) or 
+       (price[@currency="esp"] and price[@currency!="esp"]) or 
+       (price[@currency="gbp"] and price[@currency!="gbp"])
+   ]/../title
