@@ -91,7 +91,7 @@
 
 2. Códigos de los libros prestados a los usuarios residentes en Madrid.
    Consulta XPath:
-   //*[@code=//*[user=//*[city='Madrid']/../@id]/book]/title
+   //*[user=//*[city='Madrid']/../@id]/book
 
 3. Título de los libros cuyo precio está expresado en dos monedas o más.
    Consulta XPath:

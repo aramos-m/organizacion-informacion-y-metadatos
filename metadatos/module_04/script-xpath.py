@@ -1,4 +1,8 @@
 from lxml import etree
+"""
+Preferible usar 'lxml' que la librería estándar 'xml.etree.ElementTree' para trabajar con rutas relativas en XPath, 
+ofrece mejor soporte para consultas complejas y funciones avanzadas de XPath.
+"""
 
 def execute_xpath_queries(xml_file, queries):
     """
@@ -16,7 +20,8 @@ def execute_xpath_queries(xml_file, queries):
 
     results = {}
     for description, xpath_query in queries.items():
-        results[description] = root.xpath(xpath_query)  # Obtiene todos los elementos que coinciden con la consulta XPath
+        # Busca en el árbol los elementos que coinciden con la consulta XPath
+        results[description] = root.xpath(xpath_query)
 
     return results
 
@@ -56,9 +61,9 @@ for descripcion, resultado in resultados.items():
         print("No se encontraron resultados.")
     else:
         for elem in resultado:
-            # Verifica si el elemento es un nodo XML
+            # Si resultado es un nodo XML, se convierte a cadena y se muestra
             if type(elem) == etree._Element:
                 print(etree.tostring(elem, encoding='unicode').strip())
+            # Si resultado es solo texto, mostrar directamente
             else:
-                # Si el resultado es solo texto, mostrar directamente el texto
                 print(elem.strip())
