@@ -23,6 +23,17 @@
         document.getElementById('nombre').value = nombre + " " + apellidos;
       }
 
+      function todoDigitos(vcp) {
+        for(i = 0; i < vcp[0].value.length; i++)
+        {
+          if ((vcp[0].value.charAt(i) < "0") || (vcp[0].value.charAt(i) > "9")) 
+          {
+            return False;
+          }
+        }
+        return True;
+      }
+
       function enviar(){
         var vsexo = document.getElementsByName('sexo');
         if(!(vsexo[0].checked || vsexo[1].checked || vsexo[2].checked)) 
@@ -37,7 +48,8 @@
           return false;
         }
         var vcp = document.getElementsByName('cp');
-        if (vcp[0].value.length != 5)
+        alert(todoDigitos(vcp));
+        if ((vcp[0].value.length != 5) || (!todoDigitos(vcp)))
         {
           alert("El codigo postal debe tener 5 digitos");
           vcp[0].select();
