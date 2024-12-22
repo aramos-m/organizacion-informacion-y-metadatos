@@ -1,0 +1,82 @@
+<HTML>
+  <HEAD>
+    <TITLE>JavaScript y formularios</TITLE>
+    <META charset="utf-8">
+    <SCRIPT>
+      function decrementar(){
+        var vedad = document.getElementById('edad').value;
+        if (vedad > 18) {
+          vedad = vedad - 1;
+        }
+        document.getElementById('edad').value = vedad;
+      }
+
+      function incrementar(){
+        var vedad = document.getElementById('edad').value;
+        vedad = parseInt(vedad) + 1; // Se castea a int para que no lo trate como str y lo concatene
+        document.getElementById('edad').value = vedad;
+      }
+
+      function fullname(){
+        nombre = window.prompt("¿Cual es tu nombre?");
+        apellidos = window.prompt("¿Cuales son tus apellidos?");
+        document.getElementById('nombre').value = nombre + " " + apellidos;
+      }
+
+      function enviar(){
+        var vsexo = document.getElementsByName('sexo');
+        if(!(vsexo[0].checked || vsexo[1].checked || vsexo[2].checked)) 
+        {
+          alert("Debe seleccionar un sexo");
+          return false;
+        }
+        var vcol = document.getElementsByName('colectivo');
+        if (!vcol[0].selectedIndex)
+        {
+          alert("Debe seleccionar un colectivo");
+          return false;
+        }
+        var vcp = document.getElementsByName('cp');
+        if (vcp[0].value.length != 5)
+        {
+          alert("El codigo postal debe tener 5 digitos");
+          vcp[0].select();
+          vcp[0].focus();
+          return false;
+        }
+        if (!confirm("¿Desea enviar el formulario?")) return false;
+      }
+
+    </SCRIPT>
+  </HEAD>
+  <BODY>
+    <H2>JavaScript y formularios</H2>
+    <FORM ACTION="enviado.html" METHOD="get" ENCTYPE="text/plain" NAME="formulario">
+      <P>Nombre: <INPUT id="nombre" TYPE="text" SIZE="40"> <BUTTON TYPE="button" onClick="fullname()" NAME="ayuda">?</BUTTON></P>
+      <P>Edad: 
+        <BUTTON TYPE="button" onClick="decrementar()" NAME="menos">-</BUTTON>
+        <INPUT id="edad" TYPE="text" SIZE="2" VALUE="21">
+        <BUTTON TYPE="button" onClick="incrementar()" NAME="mas">+</BUTTON></P>
+      <P>Código Postal: <INPUT NAME="cp" TYPE="text" SIZE="10" VALUE="00000"></P>
+      <P>Sexo: 
+        <INPUT TYPE="radio" VALUE="hombre" NAME="sexo">Hombre 
+        <INPUT TYPE="radio" VALUE="mujer" NAME="sexo">Mujer 
+        <INPUT TYPE="radio" VALUE="otro" NAME="sexo">Otro</P>
+      <P>Colectivo:
+        <SELECT NAME="colectivo">
+          <OPTION VALUE="" SELECTED>Seleccione un colectivo</OPTION>
+          <OPTION VALUE="estudiante">Estudiante</OPTION>
+          <OPTION VALUE="pdi">PDI</OPTION>
+          <OPTION VALUE="pas">PAS</OPTION>
+        </SELECT>
+      </P>
+      <P>Titulación: 
+        <INPUT TYPE="checkbox" NAME="grado" VALUE="No">Grado 
+        <INPUT TYPE="checkbox" NAME="master" VALUE="No">Máster 
+        <INPUT TYPE="checkbox" NAME="doctorado" VALUE="No">Doctorado</P>
+      <P><INPUT TYPE="submit" onclick="return enviar()" VALUE="Enviar">&nbsp;&nbsp;<INPUT TYPE="reset" VALUE="Borrar">&nbsp;&nbsp;<BUTTON TYPE="button" NAME="comprobar">Comprobar</BUTTON></P>
+    <P><TEXTAREA NAME="valores" ROWS="9" COLS="40"></TEXTAREA></P>
+    <P><BUTTON TYPE="button" onmouseover="alert('Este botón no se puede pulsar')" NAME="desactivado">Desactivado</BUTTON></P>
+  </FORM>
+</BODY>
+</HTML>
