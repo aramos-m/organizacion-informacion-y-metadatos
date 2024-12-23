@@ -26,12 +26,9 @@
       function todoDigitos(vcp) {
         for(i = 0; i < vcp[0].value.length; i++)
         {
-          if ((vcp[0].value.charAt(i) < "0") || (vcp[0].value.charAt(i) > "9")) 
-          {
-            return False;
-          }
+          if ((vcp[0].value.charAt(i) < "0") || (vcp[0].value.charAt(i) > "9")) return false;
         }
-        return True;
+        return true;
       }
 
       function enviar(){
@@ -48,8 +45,7 @@
           return false;
         }
         var vcp = document.getElementsByName('cp');
-        alert(todoDigitos(vcp));
-        if ((vcp[0].value.length != 5) || (!todoDigitos(vcp)))
+        if (vcp[0].value.length != 5 || !todoDigitos(vcp))
         {
           alert("El codigo postal debe tener 5 digitos");
           vcp[0].select();
@@ -58,6 +54,35 @@
         }
         if (!confirm("¿Desea enviar el formulario?")) return false;
       }
+
+      function mostrar(formulario) {
+        var resultado = "Valores actuales del formulario:\n";
+        
+        resultado += "Nombre: " + formulario.nombre.value + "\n";
+
+        resultado += "Edad: " + formulario.edad.value + "\n";
+
+        resultado += "Código Postal: " + formulario.cp.value + "\n";
+
+        var sexoSeleccionado = "No seleccionado";
+        for (var i = 0; i < formulario.sexo.length; i++) {
+          if (formulario.sexo[i].checked) {
+            sexoSeleccionado = formulario.sexo[i].value;
+            break;
+          }
+        }
+        resultado += "Sexo: " + sexoSeleccionado + "\n";
+
+        var colectivo = formulario.colectivo.options[formulario.colectivo.selectedIndex].text;
+        resultado += "Colectivo: " + colectivo + "\n";
+
+        var grado = formulario.grado.checked ? "Sí" : "No";
+        var master = formulario.master.checked ? "Sí" : "No";
+        var doctorado = formulario.doctorado.checked ? "Sí" : "No";
+        resultado += "Titulaciones: Grado(" + grado + "), Máster(" + master + "), Doctorado(" + doctorado + ")\n";
+
+        formulario.valores.value = resultado;
+}
 
     </SCRIPT>
   </HEAD>
@@ -86,7 +111,7 @@
         <INPUT TYPE="checkbox" NAME="grado" VALUE="No">Grado 
         <INPUT TYPE="checkbox" NAME="master" VALUE="No">Máster 
         <INPUT TYPE="checkbox" NAME="doctorado" VALUE="No">Doctorado</P>
-      <P><INPUT TYPE="submit" onclick="return enviar()" VALUE="Enviar">&nbsp;&nbsp;<INPUT TYPE="reset" VALUE="Borrar">&nbsp;&nbsp;<BUTTON TYPE="button" NAME="comprobar">Comprobar</BUTTON></P>
+      <P><INPUT TYPE="submit" onclick="return enviar()" VALUE="Enviar">&nbsp;&nbsp;<INPUT TYPE="reset" VALUE="Borrar">&nbsp;&nbsp;<BUTTON TYPE="button" onclick="mostrar()" NAME="comprobar">Comprobar</BUTTON></P>
     <P><TEXTAREA NAME="valores" ROWS="9" COLS="40"></TEXTAREA></P>
     <P><BUTTON TYPE="button" onmouseover="alert('Este botón no se puede pulsar')" NAME="desactivado">Desactivado</BUTTON></P>
   </FORM>
