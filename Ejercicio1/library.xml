@@ -37,7 +37,7 @@
             <term>Kidnapping -- Fiction</term>
             <term>Crime -- Fiction</term>
         </keywords>
-        <idno>978-8408177630</idno>
+        <idno type="ISBN">978-8408177630</idno>
     </book>
     <book>
         <title id="05">El nombre del viento</title>
@@ -50,7 +50,7 @@
             <term>Fantasy fiction</term>
             <term>Adventure stories</term>
         </keywords>
-        <idno>978-8401352836</idno>
+        <idno type="ISBN">978-8401352836</idno>
     </book>
     <book>
         <title id="06">Los hombres me explican cosas</title>
@@ -64,7 +64,7 @@
             <term>Feminism</term>
             <term>Social history -- United States</term>
         </keywords>
-        <idno>978-8494966140</idno>
+        <idno type="ISBN">978-8494966140</idno>
     </book>
     <book>
         <title id="07">Americanah</title>
@@ -78,7 +78,7 @@
             <term>Racism -- Fiction</term>
             <term>Emigration and immigration -- Fiction</term>
         </keywords>
-        <idno>978-0307455925</idno>
+        <idno type="ISBN">978-0307455925</idno>
     </book>
     <book>
         <title id="08">American Gods</title>
@@ -91,6 +91,6 @@
             <term>Fantasy fiction</term>
             <term>Mythology -- Fiction</term>
         </keywords>
-        <idno>978-0062572233</idno>
+        <idno type="ISBN">978-0062572233</idno>
     </book>
 </lista>
